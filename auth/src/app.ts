@@ -32,6 +32,7 @@ app.all("*", () => {
 });
 
 console.log("new test");
+console.log("new test update check fail");
 
 app.use(errorHandler);
 
