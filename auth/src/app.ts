@@ -9,6 +9,7 @@ import { NotFoundError } from "./errors/not-found-error";
 import mongoose from "mongoose";
 import cookieSession from "cookie-session";
 import cors from "cors";
+import { validateLocaleAndSetLanguage } from "typescript";
 
 const app = express();
 app.set("trust proxy", true);
@@ -29,6 +30,8 @@ app.use(signupRouter);
 app.all("*", () => {
   throw new NotFoundError();
 });
+
+console.log("new test");
 
 app.use(errorHandler);
 
